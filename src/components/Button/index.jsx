@@ -14,7 +14,7 @@ const SIZES = [
 
 export const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
-  const checkButtonSize = STYLES.includes(buttonSize) ? buttonSize : SIZES[0];
+  const checkButtonSize = STYLES.includes(buttonSize) ? console.log : SIZES[0];
   return (
     <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick}
       type={type}>
@@ -27,9 +27,9 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  buttonSize: P.string.isRequired,
-  buttonStyle: P.string.isRequired,
+  buttonSize: P.string,
+  buttonStyle: P.string,
   children: P.string.isRequired,
   type: P.string,
-  onClick: P.func.isRequired,
+  onClick: P.func,
 };
