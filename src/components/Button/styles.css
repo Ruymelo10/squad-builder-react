@@ -7,14 +7,12 @@
 }
 
 .btn--primary:hover {
-  padding: 8px 20px;
   transition: all 0.3 ease-out;
   background-color: white;
   color: green;
 }
 
 .btn--outline:hover {
-  padding: 8px 20px;
   transition: all 0.3 ease-out;
   background-color: #336e0b;
   color: white;
@@ -40,5 +38,5 @@
 .btn--large {
   padding: 12px 26px;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 22px;
 }
