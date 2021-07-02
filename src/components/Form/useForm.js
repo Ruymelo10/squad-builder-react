@@ -1,25 +1,26 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-export const useForm = () => {
+export const useForm = (validate) => {
   const [values, setValues] = useState({
     username: '',
     email: '',
     password: '',
     password2: '',
   });
-  // const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({});
 
-  const handleChange = e => {
-    const{name, value} = e.target;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
     setValues({
       ...values,
-      [name]: value
+      [name]: value,
     });
   };
 
-  const handleSubmit = e =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-  }
+    setErrors(validate(values));
+  };
 
-  return{handleChange, values, handleSubmit};
+  return { handleChange, values, handleSubmit, errors };
 };

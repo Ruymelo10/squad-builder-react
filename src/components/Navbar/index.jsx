@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { MenuItems } from './MenuItems';
 import './styles.css';
 
@@ -6,12 +6,12 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicked: false
+      clicked: false,
     };
   }
 
-  handleClick = () => {
-    this.setState({ clicked: !this.state.clicked })
+  handleClick() {
+    this.setState({ clicked: !this.state.clicked });
   }
 
   render() {
@@ -29,11 +29,11 @@ class Navbar extends Component {
                   {item.title}
                 </a>
               </li>
-            )
+            );
           })}
         </ul>
       </nav>
-    )
+    );
   }
 }
 

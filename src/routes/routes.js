@@ -6,16 +6,16 @@ import App from '../templates/Home/App';
 import { LogIn } from '../templates/LogIn';
 import { SignUp } from '../templates/SignUp';
 
-export const Routes = ()=>{
-  return(
+export const Routes = () => {
+  return (
     <BrowserRouter>
-     <Navbar />
+      <Navbar />
       <Switch>
-        <Route exact path="/" component={App}/>
-        <Route exact path="/login" component={LogIn}/>
-        <Route exact path="/signup" component={SignUp}/>\
-        <Route exact path="*" component={Page404}/>
+        <Route exact path="/" component={App} />
+        <Route exact path="/login" component={LogIn} />
+        <Route exact path="/signup" component={SignUp} />\
+        <Route exact path="*" component={Page404} />
       </Switch>
     </BrowserRouter>
   );
-}
+};
