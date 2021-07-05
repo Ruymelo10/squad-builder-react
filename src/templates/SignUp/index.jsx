@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './styles.scss';
 import { InputForm } from '../../components/InputForm';
 import { Button } from '../../components/Button';
 import { useForm } from '../../components/Form/useForm';
-import validate from '../../components/Form/validateInfo';
+import validate from '../../components/Form/validateSignUp';
 
 export const SignUp = () => {
   const { handleChange, handleSubmit, values, errors } = useForm(validate);
@@ -12,7 +13,7 @@ export const SignUp = () => {
       <form onSubmit={handleSubmit}>
         <div className="Form">
           <h2>Sign Up</h2>
-          <div className="login-form-input">
+          <div className="signup-form-input">
             <InputForm
               labelName="Usuario"
               htmlFor="username"
@@ -59,7 +60,9 @@ export const SignUp = () => {
           </Button>
         </div>
       </form>
-      <Link to="login">Já é usuário? Faça o login</Link>
+      <Link to="login" style={{ textAlign: 'center', margin: '2vh 0', color: 'inherit' }}>
+        Já é usuário? Faça o login
+      </Link>
     </div>
   );
 };
