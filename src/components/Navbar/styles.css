@@ -46,6 +46,14 @@
 .menu-icon {
   display: none;
 }
+.nav-route-links {
+  display: none;
+}
+.nav-route-links a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: white;
+}
 
 @media screen and (max-width: 900px) {
   .navbarItems {
@@ -121,6 +129,22 @@
   .nav-links-mobile:hover {
     background-color: white;
     color: green;
+    transition: 250ms;
+  }
+
+  .nav-route-links {
+    display: block;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+  }
+  .nav-route-links a {
+    display: table;
+    width: 100%;
+  }
+  .nav-route-links:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+    border-radius: 0;
     transition: 250ms;
   }
 }

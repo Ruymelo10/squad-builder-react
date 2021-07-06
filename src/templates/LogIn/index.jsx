@@ -10,6 +10,9 @@ export const LogIn = () => {
   const { handleChange, handleSubmit, values, errors } = useForm(validate);
   return (
     <div className="LogIn">
+      <Link to="/">
+        <i className="fas fa-chevron-left"></i>
+      </Link>
       <form onSubmit={handleSubmit}>
         <div className="Form">
           <h2>Log in</h2>

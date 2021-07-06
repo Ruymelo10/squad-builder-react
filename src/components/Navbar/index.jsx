@@ -8,6 +8,7 @@ class Navbar extends Component {
     this.state = {
       clicked: false,
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
@@ -31,6 +32,12 @@ class Navbar extends Component {
               </li>
             );
           })}
+          <li className="nav-route-links">
+            <a href="/login">Entrar</a>
+          </li>
+          <li className="nav-route-links">
+            <a href="/signup">Cadastrar</a>
+          </li>
         </ul>
       </nav>
     );

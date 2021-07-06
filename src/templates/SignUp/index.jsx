@@ -10,6 +10,9 @@ export const SignUp = () => {
   const { handleChange, handleSubmit, values, errors } = useForm(validate);
   return (
     <div className="SignUp">
+      <Link to="/">
+        <i className="fas fa-chevron-left"></i>
+      </Link>
       <form onSubmit={handleSubmit}>
         <div className="Form">
           <h2>Sign Up</h2>

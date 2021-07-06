@@ -12,16 +12,14 @@ function App() {
       </div>
       <img src="/images/champions-trophy.png" alt="squad-image" className="app-image"></img>
       <div className="app-buttons">
-        <Button buttonSize="btn--large">
-          <Link to="/signup" style={{ textDecoration: 'none', color: 'inherit' }}>
-            Cadastrar
-          </Link>
-        </Button>
-        <Button buttonSize="btn--large" buttonStyle="btn--outline">
-          <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link to="/signup" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Button buttonSize="btn--large">Cadastrar</Button>
+        </Link>
+        <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Button buttonSize="btn--large" buttonStyle="btn--outline">
             Entrar
-          </Link>
-        </Button>
+          </Button>
+        </Link>
       </div>
     </div>
   );
