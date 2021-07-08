@@ -30,3 +30,16 @@
 .fa-chevron-left {
   color: green;
 }
+
+button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+
+.login-validate-errors {
+  display: flex;
+  background-color: red;
+}

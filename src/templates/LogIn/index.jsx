@@ -7,7 +7,7 @@ import validate from '../../components/Form/validateLogIn';
 import { Button } from '../../components/Button';
 
 export const LogIn = () => {
-  const { handleChange, handleSubmit, values, errors } = useForm(validate);
+  const { handleChange, handleSubmit, values, errors, status } = useForm(validate);
   return (
     <div className="LogIn">
       <Link to="/">
@@ -23,10 +23,19 @@ export const LogIn = () => {
               type="text"
               name="username"
               placeholder="Nome"
-              onChange={handleChange}
-              values={values.username}
+              onChange={({ target }) => {
+                console.log('🚀 ~ file: index.jsx ~ line 54 ~ LogIn ~ target', target);
+                handleChange({
+                  target: {
+                    name: target.name,
+                    value: target.value.replace(/\s/g, ''),
+                  },
+                });
+              }}
+              value={values.username}
             />
             {errors.username && <p>{errors.username}</p>}
+            {errors.userNotFound && <p>{errors.userNotFound}</p>}
             <InputForm
               labelName="Senha"
               htmlFor="password"
@@ -34,13 +43,23 @@ export const LogIn = () => {
               name="password"
               placeholder=""
               onChange={handleChange}
-              valvalues={values.password}
+              value={values.password}
+              onKeyPress={(e) => {
+                e.key === ' ' && e.preventDefault();
+              }}
             />
             {errors.password && <p>{errors.password}</p>}
+            {errors.incorrectPassword && <p>{errors.incorrectPassword}</p>}
           </div>
-          <Button className="form-input-btn" type="submit">
-            Entrar
-          </Button>
+          {status === 'loading' ? (
+            <button>
+              <i className="fas fa-spinner fa-spin"></i>
+            </button>
+          ) : (
+            <Button className="form-input-btn" type="submit">
+              Entrar
+            </Button>
+          )}
         </div>
       </form>
       <Link to="/signup" style={{ textAlign: 'center', margin: '2vh 0', color: 'inherit' }}>
