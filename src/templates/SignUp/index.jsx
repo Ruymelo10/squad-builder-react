@@ -7,7 +7,8 @@ import { useForm } from '../../components/Form/useForm';
 import validate from '../../components/Form/validateSignUp';
 
 export const SignUp = () => {
-  const { handleChange, handleSubmit, values, errors } = useForm(validate);
+  const formType = 'signup';
+  const { handleChange, handleSubmit, values, errors, status } = useForm(validate, formType);
   return (
     <div className="SignUp">
       <Link to="/">
@@ -27,6 +28,7 @@ export const SignUp = () => {
               values={values.username}
             />
             {errors.username && <p>{errors.username}</p>}
+            {errors.usernameFound && <p>{errors.usernameFound}</p>}
             <InputForm
               labelName="Email"
               htmlFor="email"
@@ -37,6 +39,7 @@ export const SignUp = () => {
               values={values.email}
             />
             {errors.email && <p>{errors.email}</p>}
+            {errors.emailFound && <p>{errors.emailFound}</p>}
             <InputForm
               labelName="Senha"
               htmlFor="password"
@@ -58,9 +61,15 @@ export const SignUp = () => {
             />
             {errors.password2 && <p>{errors.password2}</p>}
           </div>
-          <Button className="form-input-btn" type="submit">
-            Cadastre-se
-          </Button>
+          {status === 'loading' ? (
+            <button>
+              <i className="fas fa-spinner fa-spin"></i>
+            </button>
+          ) : (
+            <Button className="form-input-btn" type="submit">
+              Cadastre-se
+            </Button>
+          )}
         </div>
       </form>
       <Link to="login" style={{ textAlign: 'center', margin: '2vh 0', color: 'inherit' }}>

@@ -13,6 +13,13 @@
       "username": "jonas",
       "email": "jonas@email.com",
       "password": "1234"
+    },
+    {
+      "username": "teste",
+      "email": "teste@teste.com",
+      "password": "1234",
+      "password2": "1234",
+      "id": 3
     }
   ],
   "players": [

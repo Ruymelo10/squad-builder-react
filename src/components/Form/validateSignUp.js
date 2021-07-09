@@ -1,22 +1,27 @@
-export default function validateSignUp(values) {
+export default function validateSignUp(values, user) {
   let errors = {};
+  const searchtUsername = user.some((user) => {
+    return values.username === user.username;
+  });
+  const searchtEmail = user.some((user) => {
+    return values.email === user.email;
+  });
 
-  if (!values.username.trim()) {
-    errors.username = 'Usuario obrigatório';
-  }
-
-  if (!values.email) {
-    errors.email = 'Email obrigatório';
-  }
-
-  if (!values.password) {
-    errors.password = 'Senha obrigatória';
-  }
-
-  if (!values.password2) {
-    errors.password2 = 'Senha obrigatória';
-  } else if (values.password !== values.password2) {
-    errors.password2 = 'Senhas incompatíveis';
+  if (searchtUsername || searchtEmail) {
+    if (searchtEmail) {
+      errors.emailFound = 'Email já cadastrado';
+    } else if (searchtUsername) {
+      errors.usernameFound = 'Nome de usuário indisponível';
+    }
+  } else {
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    };
+    fetch('http://localhost:8000/users', options);
   }
 
   return errors;

@@ -7,7 +7,8 @@ import validate from '../../components/Form/validateLogIn';
 import { Button } from '../../components/Button';
 
 export const LogIn = () => {
-  const { handleChange, handleSubmit, values, errors, status } = useForm(validate);
+  const formType = 'login';
+  const { handleChange, handleSubmit, values, errors, status } = useForm(validate, formType);
   return (
     <div className="LogIn">
       <Link to="/">
@@ -24,7 +25,6 @@ export const LogIn = () => {
               name="username"
               placeholder="Nome"
               onChange={({ target }) => {
-                console.log('🚀 ~ file: index.jsx ~ line 54 ~ LogIn ~ target', target);
                 handleChange({
                   target: {
                     name: target.name,

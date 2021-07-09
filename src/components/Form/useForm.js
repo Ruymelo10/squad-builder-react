@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { loadUsers } from '../../utils/load-users';
+import { validateMissingFields } from './validateMissingFields';
 
-export const useForm = (validate) => {
+export const useForm = (validate, formType) => {
   const [values, setValues] = useState({
     username: '',
     email: '',
@@ -27,13 +28,8 @@ export const useForm = (validate) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const inputErrors = {};
-    if (!values.username) {
-      inputErrors.username = 'Usuário obrigatório';
-    }
-    if (!values.password) {
-      inputErrors.password = 'Senha obrigatória';
-    }
+
+    const inputErrors = validateMissingFields(values, formType);
     setErrors(inputErrors);
 
     if (Object.keys(inputErrors).length === 0) {
