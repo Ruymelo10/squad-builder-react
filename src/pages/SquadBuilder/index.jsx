@@ -1,6 +1,7 @@
 import { React } from 'react';
 import './styles.scss';
 import { Button } from '../../components/Button';
+import { Formations } from '../../components/Formations';
 
 export const SquadBuilder = () => {
   return (
@@ -10,7 +11,7 @@ export const SquadBuilder = () => {
         <div className="squad-players"></div>
         <div className="squad-area"></div>
         <div className="squad-options">
-          <div className="squad-formations"></div>
+          <Formations />
           <div className="squad-buttons">
             <Button buttonStyle="btn--outline" id="squad-redo-btn">
               Refazer escalação

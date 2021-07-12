@@ -1,0 +1,10 @@
+.Formations {
+  border: solid 1px gray;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+  justify-content: center;
+  margin: 0 10px 100px 10px;
+}

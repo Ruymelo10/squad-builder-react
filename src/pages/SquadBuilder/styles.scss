@@ -8,11 +8,28 @@
   border-radius: 10px;
   font-size: 1.8rem;
 }
+
+.squad-content {
+  display: flex;
+}
+
 .squad-area {
   width: 285px;
   height: 400px;
   background-image: url('../../assets/soccer-field.png');
 }
+
+.squad-options {
+  margin-left: 15px;
+}
+.squad-buttons {
+  display: flex;
+  flex-direction: column;
+  .btn {
+    margin: 5px 0;
+  }
+}
+
 #squad-redo-btn {
   color: red;
   border-color: red;
