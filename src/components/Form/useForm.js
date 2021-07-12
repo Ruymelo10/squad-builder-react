@@ -22,8 +22,10 @@ export const useForm = (validate, formType) => {
 
   const handleFormResponse = async () => {
     const usersResponse = await loadUsers();
-    setErrors(validate(values, usersResponse));
-    setStatus('not-loading');
+    const currentStatus = status;
+    const validateResponse = validate(values, usersResponse, currentStatus);
+    setErrors(validateResponse.errors);
+    setStatus(validateResponse.status);
   };
 
   const handleSubmit = (e) => {
