@@ -56,7 +56,7 @@ export const LogIn = () => {
               <i className="fas fa-spinner fa-spin"></i>
             </button>
           ) : status === 'login-success' ? (
-            <Redirect to="/" />
+            <Redirect to="/main" />
           ) : (
             <Button className="form-input-btn" type="submit">
               Entrar
