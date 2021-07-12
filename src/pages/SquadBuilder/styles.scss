@@ -8,7 +8,11 @@
   border-radius: 10px;
   font-size: 1.8rem;
 }
-
+.squad-area {
+  width: 285px;
+  height: 400px;
+  background-image: url('../../assets/soccer-field.png');
+}
 #squad-redo-btn {
   color: red;
   border-color: red;
