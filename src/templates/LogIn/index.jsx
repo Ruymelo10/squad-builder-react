@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import './styles.scss';
 import { InputForm } from '../../components/InputForm';
 import { useForm } from '../../components/Form/useForm';
@@ -55,6 +55,8 @@ export const LogIn = () => {
             <button>
               <i className="fas fa-spinner fa-spin"></i>
             </button>
+          ) : status === 'login-success' ? (
+            <Redirect to="/" />
           ) : (
             <Button className="form-input-btn" type="submit">
               Entrar

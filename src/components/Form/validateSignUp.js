@@ -1,4 +1,4 @@
-export default function validateSignUp(values, user) {
+export default function validateSignUp(values, user, status) {
   let errors = {};
   const searchtUsername = user.some((user) => {
     return values.username === user.username;
@@ -13,6 +13,7 @@ export default function validateSignUp(values, user) {
     } else if (searchtUsername) {
       errors.usernameFound = 'Nome de usuário indisponível';
     }
+    status = 'signup-error';
   } else {
     const options = {
       method: 'POST',
@@ -22,7 +23,8 @@ export default function validateSignUp(values, user) {
       body: JSON.stringify(values),
     };
     fetch('http://localhost:8000/users', options);
+    status = 'signup-success';
   }
 
-  return errors;
+  return { errors, status };
 }
