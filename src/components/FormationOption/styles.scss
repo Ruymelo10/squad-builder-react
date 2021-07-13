@@ -1,9 +1,11 @@
-h2 {
-  color: green;
-  text-decoration-color: #11c0f7;
-}
+.FormationOptions {
+  h2 {
+    color: green;
+    text-decoration-color: #11c0f7;
+  }
 
-h2:hover {
-  cursor: pointer;
-  text-decoration: underline;
+  h2:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }

@@ -16,6 +16,19 @@
   grid-gap: 5vw;
 }
 
+.squad-players-area {
+  border: 1px solid gray;
+}
+.squad-players-area-text {
+  background-color: #c4c4c4;
+  h1 {
+    text-align: center;
+  }
+  p {
+    width: 40vw;
+    margin: 0 2vw;
+  }
+}
 .squad-area {
   width: 285px;
   height: 400px;
@@ -39,4 +52,13 @@
 #squad-redo-btn:hover {
   color: white;
   background-color: red;
+}
+.squad-builder-loading {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 40vh;
+}
+.fas {
+  color: green;
 }
