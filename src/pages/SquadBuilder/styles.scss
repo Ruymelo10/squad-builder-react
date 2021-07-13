@@ -10,7 +10,10 @@
 }
 
 .squad-content {
-  display: flex;
+  margin: 0 3vw;
+  display: grid;
+  grid-template-columns: 2fr 285px 1fr;
+  grid-gap: 5vw;
 }
 
 .squad-area {
@@ -19,14 +22,12 @@
   background-image: url('../../assets/soccer-field.png');
 }
 
-.squad-options {
-  margin-left: 15px;
-}
 .squad-buttons {
   display: flex;
   flex-direction: column;
   .btn {
     margin: 5px 0;
+    font-size: 20px;
   }
 }
 

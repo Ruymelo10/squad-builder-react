@@ -2,13 +2,14 @@ import { React } from 'react';
 import './styles.scss';
 import { Button } from '../../components/Button';
 import { Formations } from '../../components/Formations';
+import { PlayersArea } from '../../components/PlayersArea';
 
 export const SquadBuilder = () => {
   return (
     <div className="SquadBuilder">
       <input className="squad-input" placeholder="Dê um nome à sua equipe" />
       <div className="squad-content">
-        <div className="squad-players"></div>
+        <PlayersArea />
         <div className="squad-area"></div>
         <div className="squad-options">
           <Formations />
