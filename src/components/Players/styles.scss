@@ -1,10 +1,13 @@
 .PlayersArea {
+  overflow-y: scroll;
+  height: 52vh;
   h2 {
     align-self: center;
     margin-left: 2vw;
   }
 }
 .players-area-player {
+  height: 13vh;
   padding: 1vh 0;
   display: flex;
   justify-content: space-between;

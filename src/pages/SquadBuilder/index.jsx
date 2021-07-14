@@ -35,7 +35,7 @@ export const SquadBuilder = () => {
                   acordo com suas características reais.
                 </p>
               </div>
-              <Players players={playersData.slice(0, 4)} />
+              <Players players={playersData} />
             </div>
             <div className="squad-area"></div>
             <div className="squad-options">
