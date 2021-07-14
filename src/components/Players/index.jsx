@@ -1,7 +1,7 @@
 import { React } from 'react';
 import './styles.scss';
 import P from 'prop-types';
-
+import { PlayerAtr } from '../PlayerAtr';
 export const Players = ({ players }) => {
   return (
     <div className="PlayersArea">
@@ -11,10 +11,7 @@ export const Players = ({ players }) => {
             <h2>{player.overall}</h2>
             <p>{player.name}</p>
             <div className="players-area-player-stats">
-              <p>VEL {player.velocidade}</p>
-              <p>FIN {player.finalizacao}</p>
-              <p>PAS {player.passe}</p>
-              <p>DEF {player.defesa}</p>
+              <PlayerAtr attributes={player.attributes} />
             </div>
           </div>
         );

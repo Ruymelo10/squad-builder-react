@@ -1,0 +1,12 @@
+$atr-good: green;
+$atr-medium: yellow;
+$atr-bad: red;
+
+.PlayerAtr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 50px;
+}
+.player-atr-bar {
+  height: 1vh;
+}

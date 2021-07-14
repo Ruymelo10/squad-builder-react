@@ -5,15 +5,14 @@
   }
 }
 .players-area-player {
+  padding: 1vh 0;
   display: flex;
   justify-content: space-between;
+  border: 1px solid grey;
   p {
     align-self: center;
   }
 }
 .players-area-player-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0 50px;
   margin-right: 2vw;
 }
