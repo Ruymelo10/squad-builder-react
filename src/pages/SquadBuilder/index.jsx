@@ -4,6 +4,7 @@ import { Button } from '../../components/Button';
 import { Formations } from '../../components/Formations';
 import { Players } from '../../components/Players';
 import { loadPlayers } from '../../utils/load-players';
+import { FormationArea } from '../../components/FormationArea';
 
 export const SquadBuilder = () => {
   const [loading, setLoading] = useState(true);
@@ -37,7 +38,9 @@ export const SquadBuilder = () => {
               </div>
               <Players players={playersData} />
             </div>
-            <div className="squad-area"></div>
+            <div className="squad-area">
+              <FormationArea />
+            </div>
             <div className="squad-options">
               <Formations />
               <div className="squad-buttons">

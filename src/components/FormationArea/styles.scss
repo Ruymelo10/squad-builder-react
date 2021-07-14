@@ -1,0 +1,19 @@
+.FormationArea {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 0.5fr;
+  height: 100%;
+}
+.formation-area {
+  display: flex;
+  justify-content: space-around;
+}
+.strikers {
+  align-items: center;
+}
+.midfielders,
+.defenders {
+  align-items: flex-end;
+}
+.defenders {
+  margin-bottom: 1vh;
+}

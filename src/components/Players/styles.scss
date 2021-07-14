@@ -1,10 +1,20 @@
 .PlayersArea {
   overflow-y: scroll;
-  height: 52vh;
+  height: 39vh;
   h2 {
     align-self: center;
     margin-left: 2vw;
   }
+}
+::-webkit-scrollbar {
+  width: 0.8vw;
+}
+::-webkit-scrollbar-track {
+  border: 7px solid #c4c4c4;
+}
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 5px;
 }
 .players-area-player {
   height: 13vh;

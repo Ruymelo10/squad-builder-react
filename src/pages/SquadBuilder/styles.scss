@@ -1,3 +1,8 @@
+.SquadBuilder {
+  .fas {
+    color: green;
+  }
+}
 .squad-input {
   display: flex;
   width: 70%;
@@ -12,12 +17,13 @@
 .squad-content {
   margin: 0 3vw;
   display: grid;
-  grid-template-columns: 2fr 285px 1fr;
+  grid-template-columns: 2fr 312px 1fr;
   grid-gap: 5vw;
 }
 
 .squad-players-area {
   border: 1px solid gray;
+  width: 35vw;
 }
 .squad-players-area-text {
   background-color: #c4c4c4;
@@ -25,13 +31,12 @@
     text-align: center;
   }
   p {
-    width: 40vw;
     margin: 0 2vw;
   }
 }
 .squad-area {
-  width: 285px;
-  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-image: url('../../assets/soccer-field.png');
 }
 
@@ -58,7 +63,4 @@
   justify-content: center;
   align-self: center;
   margin-top: 40vh;
-}
-.fas {
-  color: green;
 }
