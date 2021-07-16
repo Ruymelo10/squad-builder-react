@@ -3,12 +3,13 @@ import { Link, Redirect } from 'react-router-dom';
 import './styles.scss';
 import { InputForm } from '../../components/InputForm';
 import { Button } from '../../components/Button';
-import { useForm } from '../../components/Form/useForm';
 import validate from '../../components/Form/validateSignUp';
+import { WithForm } from '../../components/Form/withForm';
+import P from 'prop-types';
 
-export const SignUp = () => {
-  const formType = 'signup';
-  const { handleChange, handleSubmit, values, errors, status } = useForm(validate, formType);
+const SignUpUnwrapped = (props) => {
+  const { handleChange, handleSubmit, values, errors, status } = props;
+
   return (
     <div className="SignUp">
       <Link to="/">
@@ -79,4 +80,14 @@ export const SignUp = () => {
       </Link>
     </div>
   );
+};
+
+export const SignUp = WithForm(SignUpUnwrapped, validate, 'signup');
+
+SignUpUnwrapped.propTypes = {
+  handleChange: P.func,
+  handleSubmit: P.func,
+  values: P.string,
+  errors: P.object,
+  status: P.string,
 };
