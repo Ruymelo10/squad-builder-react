@@ -1,10 +1,23 @@
-import { React } from 'react';
+import React from 'react';
 import './styles.scss';
+import P from 'prop-types';
+import { usePlayerPosition } from '../PlayerPositionContext';
 
-export const PlayersBtn = () => {
+export const PlayersBtn = ({ position }) => {
+  const { setPlayerAreaPosition } = usePlayerPosition();
   return (
     <div className="PlayersBtn">
-      <i className="fas fa-plus-circle fa-3x"></i>
+      <button
+        className="fas fa-plus-circle fa-3x"
+        onClick={() => {
+          setPlayerAreaPosition(position);
+        }}
+      />
     </div>
   );
+};
+
+PlayersBtn.propTypes = {
+  position: P.string,
+  onClick: P.func,
 };
