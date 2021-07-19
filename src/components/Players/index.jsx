@@ -12,17 +12,21 @@ export const Players = ({ players }) => {
       {playerAreaPosition === 'default' ? (
         <h2>Selecione uma posição ao no gramado</h2>
       ) : (
-        players.map((player, index) => {
-          return (
-            <div key={index} className="players-area-player">
-              <h2>{player.overall}</h2>
-              <p>{player.name}</p>
-              <div className="players-area-player-stats">
-                <PlayerAtr attributes={player.attributes} />
+        players
+          .filter((player) => {
+            return player.position === playerAreaPosition;
+          })
+          .map((player, index) => {
+            return (
+              <div key={index} className="players-area-player">
+                <h2>{player.overall}</h2>
+                <p>{player.name}</p>
+                <div className="players-area-player-stats">
+                  <PlayerAtr attributes={player.attributes} />
+                </div>
               </div>
-            </div>
-          );
-        })
+            );
+          })
       )}
     </div>
   );
