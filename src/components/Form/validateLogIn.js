@@ -1,5 +1,5 @@
 const validateLogIn = (values, user, status) => {
-  const currentUser = user.filter((user) => {
+  let currentUser = user.filter((user) => {
     return values.username === user.username;
   });
 
@@ -10,6 +10,7 @@ const validateLogIn = (values, user, status) => {
   } else if (values.password !== user[0].password) {
     errors.incorrectPassword = 'Senha incorreta';
   }
+  currentUser = currentUser[0];
 
   if (Object.keys(errors).length > 0) {
     status = 'login-error';
@@ -17,7 +18,7 @@ const validateLogIn = (values, user, status) => {
     status = 'login-success';
   }
 
-  return { errors, status };
+  return { errors, status, currentUser };
 };
 
 export default validateLogIn;
