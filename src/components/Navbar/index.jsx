@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { MenuItems } from './MenuItems';
 import './styles.css';
+import P from 'prop-types';
+import { connect } from 'react-redux';
 
 class Navbar extends Component {
   constructor(props) {
@@ -23,15 +25,16 @@ class Navbar extends Component {
           <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
         </div>
         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-          {MenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <a className={item.cName} href={item.url}>
-                  {item.title}
-                </a>
-              </li>
-            );
-          })}
+          {this.props.name &&
+            MenuItems.map((item, index) => {
+              return (
+                <li key={index}>
+                  <a className={item.cName} href={item.url}>
+                    {item.title}
+                  </a>
+                </li>
+              );
+            })}
           <li className="nav-route-links">
             <a href="/login">Entrar</a>
           </li>
@@ -43,5 +46,10 @@ class Navbar extends Component {
     );
   }
 }
+Navbar.propTypes = {
+  name: P.string,
+  role: P.string,
+};
+const mapStateToProps = (state) => state.user;
 
-export default Navbar;
+export default connect(mapStateToProps)(Navbar);
