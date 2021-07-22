@@ -5,8 +5,11 @@ import { InputForm } from '../../components/InputForm';
 import { useForm } from '../../components/Form/useForm';
 import validate from '../../components/Form/validateLogIn';
 import { Button } from '../../components/Button';
+import { getUser } from '../../reducers/userReducer';
+import { useSelector } from 'react-redux';
 
 export const LogIn = () => {
+  const { name } = useSelector(getUser);
   const formType = 'login';
   const { handleChange, handleSubmit, values, errors, status } = useForm(validate, formType);
   return (
@@ -55,7 +58,7 @@ export const LogIn = () => {
             <button>
               <i className="fas fa-spinner fa-spin"></i>
             </button>
-          ) : status === 'login-success' ? (
+          ) : status === 'login-success' && name ? (
             <Redirect to="/main" />
           ) : (
             <Button className="form-input-btn" type="submit">

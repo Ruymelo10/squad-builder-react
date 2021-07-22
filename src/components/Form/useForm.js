@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { loadUsers } from '../../utils/load-users';
 import { validateMissingFields } from './validateMissingFields';
 import { useDispatch } from 'react-redux';
-import { login } from '../../features/userSlice';
+import { userLogin } from '../../actions';
 
 export const useForm = (validate, formType) => {
   const [values, setValues] = useState({
@@ -29,10 +29,9 @@ export const useForm = (validate, formType) => {
     const validateResponse = validate(values, usersResponse, currentStatus);
     setErrors(validateResponse.errors);
     setStatus(validateResponse.status);
-    console.log(validateResponse.currentUser);
     if (validateResponse.status === 'login-success') {
       dispatch(
-        login({
+        userLogin({
           name: validateResponse.currentUser.username,
           password: validateResponse.currentUser.password,
           role: validateResponse.currentUser.role,
@@ -51,7 +50,6 @@ export const useForm = (validate, formType) => {
     if (Object.keys(inputErrors).length === 0) {
       setStatus('loading');
       handleFormResponse();
-      console.log('depois da função', status);
     }
   };
 
