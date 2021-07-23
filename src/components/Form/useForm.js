@@ -33,9 +33,7 @@ export const useForm = (validate, formType) => {
       dispatch(
         userLogin({
           name: validateResponse.currentUser.username,
-          password: validateResponse.currentUser.password,
           role: validateResponse.currentUser.role,
-          loggedIn: true,
         }),
       );
     }
