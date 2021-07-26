@@ -46,7 +46,14 @@ export const useForm = (validate, formType) => {
 
     if (Object.keys(inputErrors).length === 0) {
       setStatus('loading');
-      dispatch(loadUsers()).then((users) => handleFormResponse(users));
+      dispatch(loadUsers())
+        .then((users) => handleFormResponse(users))
+        .catch(() => {
+          dispatch({
+            type: 'FETCH_USER_FAILURE',
+            error: 'fetch error',
+          });
+        });
     }
   };
 
