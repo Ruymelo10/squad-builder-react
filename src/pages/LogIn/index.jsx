@@ -5,7 +5,7 @@ import { InputForm } from '../../components/InputForm';
 import { useForm } from '../../components/Form/useForm';
 import validate from '../../components/Form/validateLogIn';
 import { Button } from '../../components/Button';
-import { getUser } from '../../reducers/userReducer';
+import { getUser } from '../../container/user/userReducer';
 import { useSelector } from 'react-redux';
 
 export const LogIn = () => {

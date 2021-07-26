@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { loadUsers } from '../../utils/load-users';
+import { loadUsers } from '../../container/fetchUser/fetchUserAction';
 import { validateMissingFields } from './validateMissingFields';
 import { useDispatch } from 'react-redux';
-import { userLogin } from '../../actions';
+import { userLogin } from '../../container/user/userAction';
 
 export const useForm = (validate, formType) => {
   const [values, setValues] = useState({
@@ -23,10 +23,9 @@ export const useForm = (validate, formType) => {
     });
   };
 
-  const handleFormResponse = async () => {
-    const usersResponse = await loadUsers();
+  const handleFormResponse = (users) => {
     const currentStatus = status;
-    const validateResponse = validate(values, usersResponse, currentStatus);
+    const validateResponse = validate(values, users, currentStatus);
     setErrors(validateResponse.errors);
     setStatus(validateResponse.status);
     if (validateResponse.status === 'login-success') {
@@ -47,7 +46,7 @@ export const useForm = (validate, formType) => {
 
     if (Object.keys(inputErrors).length === 0) {
       setStatus('loading');
-      handleFormResponse();
+      dispatch(loadUsers()).then((users) => handleFormResponse(users));
     }
   };
 

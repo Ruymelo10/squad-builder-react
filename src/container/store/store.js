@@ -1,8 +1,14 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import { LOGIN, LOGOUT } from '../actions';
-import reducers from '../reducers/index';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import { LOGIN, LOGOUT } from '../user/userAction';
+import thunk from 'redux-thunk';
+import { userReducer } from '../user/userReducer';
+import { fetchUserReducer } from '../fetchUser/fetchUserReducer';
 
-// eslint-disable-next-line no-unused-vars
+const reducers = combineReducers({
+  user: userReducer,
+  fecthUsers: fetchUserReducer,
+});
+
 const persistUser = () => {
   return (next) => (action) => {
     if (action.type === LOGIN) {
@@ -18,6 +24,6 @@ const persistUser = () => {
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(reducers, composeEnhancers(applyMiddleware(persistUser)));
+const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk, persistUser)));
 
 export default store;
