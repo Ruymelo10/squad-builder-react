@@ -7,9 +7,11 @@ import validate from '../../components/Form/validateLogIn';
 import { Button } from '../../components/Button';
 import { getUser } from '../../container/user/userReducer';
 import { useSelector } from 'react-redux';
+import { getFetchedUsers } from '../../container/fetchUser/fetchUserReducer';
 
 export const LogIn = () => {
   const { name } = useSelector(getUser);
+  const { error } = useSelector(getFetchedUsers);
   const formType = 'login';
   const { handleChange, handleSubmit, values, errors, status } = useForm(validate, formType);
   return (
@@ -17,6 +19,7 @@ export const LogIn = () => {
       <Link to="/">
         <i className="fas fa-chevron-left"></i>
       </Link>
+      {error !== null && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="Form">
           <h2>Log in</h2>

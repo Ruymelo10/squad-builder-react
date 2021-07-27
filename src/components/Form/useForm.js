@@ -51,7 +51,7 @@ export const useForm = (validate, formType) => {
         .catch(() => {
           dispatch({
             type: 'FETCH_USER_FAILURE',
-            error: 'fetch error',
+            error: 'Algo deu errado, tente novamente',
           });
         });
     }
