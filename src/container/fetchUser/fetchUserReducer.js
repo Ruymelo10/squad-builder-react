@@ -15,7 +15,7 @@ export function fetchUserReducer(state = initialState, action) {
     case 'FETCH_USER_SUCCESS':
       return {
         ...state,
-        ...action.payload,
+        users: action.payload,
         status: 'fetch-success',
         error: null,
       };
