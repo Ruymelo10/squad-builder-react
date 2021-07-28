@@ -4,7 +4,7 @@ import { loadUsers } from '../../container/fetchUser/fetchUserAction';
 import { validateMissingFields } from './validateMissingFields';
 
 export const WithForm = (Component, validate, formType) => {
-  function funcWithForm(props) {
+  function FuncWithForm(props) {
     const [values, setValues] = useState({
       username: '',
       email: '',
@@ -53,5 +53,5 @@ export const WithForm = (Component, validate, formType) => {
       />
     );
   }
-  return funcWithForm;
+  return FuncWithForm;
 };
