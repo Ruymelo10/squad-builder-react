@@ -1,0 +1,66 @@
+.SquadBuilder {
+  .fas {
+    color: green;
+  }
+}
+.squad-input {
+  display: flex;
+  width: 70%;
+  margin: 3vh auto;
+  justify-self: center;
+  height: 55px;
+  border: 1px solid #656464;
+  border-radius: 10px;
+  font-size: 1.8rem;
+}
+
+.squad-content {
+  margin: 0 3vw;
+  display: grid;
+  grid-template-columns: 2fr 312px 1fr;
+  grid-gap: 5vw;
+}
+
+.squad-players-area {
+  border: 1px solid gray;
+  width: 35vw;
+}
+.squad-players-area-text {
+  background-color: #c4c4c4;
+  h1 {
+    text-align: center;
+  }
+  p {
+    margin: 0 2vw;
+  }
+}
+.squad-area {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url('../../assets/soccer-field.png');
+}
+
+.squad-buttons {
+  display: flex;
+  flex-direction: column;
+  .btn {
+    margin: 5px 0;
+    font-size: 20px;
+  }
+}
+
+#squad-redo-btn {
+  color: red;
+  border-color: red;
+}
+
+#squad-redo-btn:hover {
+  color: white;
+  background-color: red;
+}
+.squad-builder-loading {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 40vh;
+}

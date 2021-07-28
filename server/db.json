@@ -24,150 +24,108 @@
   ],
   "players": [
     {
-      "atacantes": [
-        {
-          "id": 1,
-          "name": "Cristiano Ronaldo",
-          "picture": "exemplo.png",
-          "overall": 92,
-          "velocidade": 89,
-          "finalizacao": 93,
-          "passe": 81,
-          "defesa": 35
-        },
-        {
-          "id": 2,
-          "name": "Neymar jr.",
-          "picture": "exemplo.png",
-          "overall": 91,
-          "velocidade": 91,
-          "finalizacao": 85,
-          "passe": 86,
-          "defesa": 36
-        },
-        {
-          "id": 3,
-          "name": "Lewandowski",
-          "picture": "exemplo.png",
-          "overall": 91,
-          "velocidade": 78,
-          "finalizacao": 95,
-          "passe": 78,
-          "defesa": 36
-        }
-      ]
+      "id": 1,
+      "position": "atacante",
+      "name": "Cristiano Ronaldo",
+      "picture": "exemplo.png",
+      "overall": 92,
+      "attributes": [{ "VEL": 89 }, { "FIN": 93 }, { "PAS": 81 }, { "DEF": 35 }]
     },
     {
-      "meias": [
-        {
-          "id": 4,
-          "name": "Bruno Fernandes",
-          "picture": "exemplo.png",
-          "overall": 87,
-          "velocidade": 77,
-          "finalizacao": 83,
-          "passe": 88,
-          "defesa": 68
-        },
-        {
-          "id": 5,
-          "name": "De Bruyne",
-          "picture": "exemplo.png",
-          "overall": 91,
-          "velocidade": 76,
-          "finalizacao": 86,
-          "passe": 93,
-          "defesa": 64
-        },
-        {
-          "id": 6,
-          "name": "Kante",
-          "picture": "exemplo.png",
-          "overall": 88,
-          "velocidade": 77,
-          "finalizacao": 66,
-          "passe": 76,
-          "defesa": 86
-        }
-      ]
+      "id": 2,
+      "position": "atacante",
+      "name": "Neymar jr.",
+      "picture": "exemplo.png",
+      "overall": 91,
+      "attributes": [{ "VEL": 91 }, { "FIN": 85 }, { "PAS": 86 }, { "DEF": 36 }]
     },
     {
-      "defensores": [
-        {
-          "id": 7,
-          "name": "Marquinhos",
-          "picture": "exemplo.png",
-          "overall": 85,
-          "velocidade": 72,
-          "finalizacao": 41,
-          "passe": 73,
-          "defesa": 87
-        },
-        {
-          "id": 8,
-          "name": "Sergio Ramos",
-          "picture": "exemplo.png",
-          "overall": 89,
-          "velocidade": 71,
-          "finalizacao": 70,
-          "passe": 76,
-          "defesa": 88
-        },
-        {
-          "id": 9,
-          "name": "Davies",
-          "picture": "exemplo.png",
-          "overall": 81,
-          "velocidade": 96,
-          "finalizacao": 67,
-          "passe": 69,
-          "defesa": 76
-        },
-        {
-          "id": 10,
-          "name": "Joao Cancelo",
-          "picture": "exemplo.png",
-          "overall": 83,
-          "velocidade": 86,
-          "finalizacao": 65,
-          "passe": 79,
-          "defesa": 77
-        }
-      ]
+      "id": 3,
+      "position": "atacante",
+      "name": "Lewandowski",
+      "picture": "exemplo.png",
+      "overall": 91,
+      "attributes": [{ "VEL": 78 }, { "FIN": 95 }, { "PAS": 78 }, { "DEF": 36 }]
     },
     {
-      "goleiros": [
-        {
-          "id": 11,
-          "name": "Alisson",
-          "picture": "exemplo.png",
-          "overall": 90,
-          "elasticidade": 86,
-          "manejo": 88,
-          "reflexo": 89,
-          "posicionamento": 91
-        },
-        {
-          "id": 12,
-          "name": "Ederson",
-          "picture": "exemplo.png",
-          "overall": 88,
-          "elasticidade": 86,
-          "manejo": 82,
-          "reflexo": 88,
-          "posicionamento": 86
-        },
-        {
-          "id": 13,
-          "name": "Neuer",
-          "picture": "exemplo.png",
-          "overall": 89,
-          "elasticidade": 87,
-          "manejo": 87,
-          "reflexo": 89,
-          "posicionamento": 86
-        }
-      ]
+      "id": 4,
+      "position": "meia",
+      "name": "Bruno Fernandes",
+      "picture": "exemplo.png",
+      "overall": 87,
+      "attributes": [{ "VEL": 77 }, { "FIN": 83 }, { "PAS": 88 }, { "DEF": 68 }]
+    },
+    {
+      "id": 5,
+      "position": "meia",
+      "name": "De Bruyne",
+      "picture": "exemplo.png",
+      "overall": 91,
+      "attributes": [{ "VEL": 76 }, { "FIN": 86 }, { "PAS": 93 }, { "DEF": 64 }]
+    },
+    {
+      "id": 6,
+      "position": "meia",
+      "name": "Kante",
+      "picture": "exemplo.png",
+      "overall": 88,
+      "attributes": [{ "VEL": 77 }, { "FIN": 66 }, { "PAS": 76 }, { "DEF": 86 }]
+    },
+    {
+      "id": 7,
+      "position": "defensor",
+      "name": "Marquinhos",
+      "picture": "exemplo.png",
+      "overall": 85,
+      "attributes": [{ "VEL": 72 }, { "FIN": 41 }, { "PAS": 73 }, { "DEF": 87 }]
+    },
+    {
+      "id": 8,
+      "position": "defensor",
+      "name": "Sergio Ramos",
+      "picture": "exemplo.png",
+      "overall": 89,
+      "attributes": [{ "VEL": 71 }, { "FIN": 70 }, { "PAS": 76 }, { "DEF": 88 }]
+    },
+    {
+      "id": 9,
+      "position": "defensor",
+      "name": "Davies",
+      "picture": "exemplo.png",
+      "overall": 81,
+      "attributes": [{ "VEL": 96 }, { "FIN": 67 }, { "PAS": 69 }, { "DEF": 76 }]
+    },
+    {
+      "id": 10,
+      "position": "defensor",
+      "name": "Joao Cancelo",
+      "picture": "exemplo.png",
+      "overall": 83,
+      "attributes": [{ "VEL": 86 }, { "FIN": 65 }, { "PAS": 79 }, { "DEF": 77 }]
+    },
+    {
+      "id": 11,
+      "position": "goleiro",
+      "name": "Alisson",
+      "picture": "exemplo.png",
+      "overall": 90,
+      "attributes": [{ "ELA": 86 }, { "MAN": 88 }, { "REF": 89 }, { "POS": 91 }]
+    },
+    {
+      "id": 12,
+      "position": "goleiro",
+      "name": "Ederson",
+      "picture": "exemplo.png",
+      "overall": 88,
+      "attributes": [{ "ELA": 86 }, { "MAN": 82 }, { "REF": 88 }, { "POS": 86 }]
+    },
+    {
+      "id": 13,
+      "position": "goleiro",
+      "name": "Neuer",
+      "picture": "exemplo.png",
+      "overall": 89,
+      "attributes": [{ "ELA": 87 }, { "MAN": 87 }, { "REF": 89 }, { "POS": 86 }]
     }
   ]
 }
