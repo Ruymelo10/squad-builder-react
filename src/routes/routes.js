@@ -8,6 +8,7 @@ import { LogIn } from '../pages/LogIn';
 import { Main } from '../pages/Main';
 import { SignUp } from '../pages/SignUp';
 import { SquadBuilder } from '../pages/SquadBuilder';
+import { InsertPlayer } from '../pages/InsertPlayer/';
 
 export const Routes = () => {
   return (
@@ -15,6 +16,7 @@ export const Routes = () => {
       <Navbar />
       <Switch>
         <Route exact path="/" component={App} />
+        <Route exact path="/insert-player" component={InsertPlayer} />
         <Route exact path="/main" component={Main} />
         <Route exact path="/login" component={LogIn} />
         <Route exact path="/signup" component={SignUp} />
