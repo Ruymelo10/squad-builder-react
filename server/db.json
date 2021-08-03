@@ -29,7 +29,20 @@
       "name": "Cristiano Ronaldo",
       "picture": "exemplo.png",
       "overall": 92,
-      "attributes": [{ "VEL": 89 }, { "FIN": 93 }, { "PAS": 81 }, { "DEF": 35 }]
+      "attributes": [
+        {
+          "VEL": 89
+        },
+        {
+          "FIN": 93
+        },
+        {
+          "PAS": 81
+        },
+        {
+          "DEF": 35
+        }
+      ]
     },
     {
       "id": 2,
@@ -37,7 +50,20 @@
       "name": "Neymar jr.",
       "picture": "exemplo.png",
       "overall": 91,
-      "attributes": [{ "VEL": 91 }, { "FIN": 85 }, { "PAS": 86 }, { "DEF": 36 }]
+      "attributes": [
+        {
+          "VEL": 91
+        },
+        {
+          "FIN": 85
+        },
+        {
+          "PAS": 86
+        },
+        {
+          "DEF": 36
+        }
+      ]
     },
     {
       "id": 3,
@@ -45,7 +71,20 @@
       "name": "Lewandowski",
       "picture": "exemplo.png",
       "overall": 91,
-      "attributes": [{ "VEL": 78 }, { "FIN": 95 }, { "PAS": 78 }, { "DEF": 36 }]
+      "attributes": [
+        {
+          "VEL": 78
+        },
+        {
+          "FIN": 95
+        },
+        {
+          "PAS": 78
+        },
+        {
+          "DEF": 36
+        }
+      ]
     },
     {
       "id": 4,
@@ -53,7 +92,20 @@
       "name": "Bruno Fernandes",
       "picture": "exemplo.png",
       "overall": 87,
-      "attributes": [{ "VEL": 77 }, { "FIN": 83 }, { "PAS": 88 }, { "DEF": 68 }]
+      "attributes": [
+        {
+          "VEL": 77
+        },
+        {
+          "FIN": 83
+        },
+        {
+          "PAS": 88
+        },
+        {
+          "DEF": 68
+        }
+      ]
     },
     {
       "id": 5,
@@ -61,7 +113,20 @@
       "name": "De Bruyne",
       "picture": "exemplo.png",
       "overall": 91,
-      "attributes": [{ "VEL": 76 }, { "FIN": 86 }, { "PAS": 93 }, { "DEF": 64 }]
+      "attributes": [
+        {
+          "VEL": 76
+        },
+        {
+          "FIN": 86
+        },
+        {
+          "PAS": 93
+        },
+        {
+          "DEF": 64
+        }
+      ]
     },
     {
       "id": 6,
@@ -69,7 +134,20 @@
       "name": "Kante",
       "picture": "exemplo.png",
       "overall": 88,
-      "attributes": [{ "VEL": 77 }, { "FIN": 66 }, { "PAS": 76 }, { "DEF": 86 }]
+      "attributes": [
+        {
+          "VEL": 77
+        },
+        {
+          "FIN": 66
+        },
+        {
+          "PAS": 76
+        },
+        {
+          "DEF": 86
+        }
+      ]
     },
     {
       "id": 7,
@@ -77,7 +155,20 @@
       "name": "Marquinhos",
       "picture": "exemplo.png",
       "overall": 85,
-      "attributes": [{ "VEL": 72 }, { "FIN": 41 }, { "PAS": 73 }, { "DEF": 87 }]
+      "attributes": [
+        {
+          "VEL": 72
+        },
+        {
+          "FIN": 41
+        },
+        {
+          "PAS": 73
+        },
+        {
+          "DEF": 87
+        }
+      ]
     },
     {
       "id": 8,
@@ -85,7 +176,20 @@
       "name": "Sergio Ramos",
       "picture": "exemplo.png",
       "overall": 89,
-      "attributes": [{ "VEL": 71 }, { "FIN": 70 }, { "PAS": 76 }, { "DEF": 88 }]
+      "attributes": [
+        {
+          "VEL": 71
+        },
+        {
+          "FIN": 70
+        },
+        {
+          "PAS": 76
+        },
+        {
+          "DEF": 88
+        }
+      ]
     },
     {
       "id": 9,
@@ -93,7 +197,20 @@
       "name": "Davies",
       "picture": "exemplo.png",
       "overall": 81,
-      "attributes": [{ "VEL": 96 }, { "FIN": 67 }, { "PAS": 69 }, { "DEF": 76 }]
+      "attributes": [
+        {
+          "VEL": 96
+        },
+        {
+          "FIN": 67
+        },
+        {
+          "PAS": 69
+        },
+        {
+          "DEF": 76
+        }
+      ]
     },
     {
       "id": 10,
@@ -101,7 +218,20 @@
       "name": "Joao Cancelo",
       "picture": "exemplo.png",
       "overall": 83,
-      "attributes": [{ "VEL": 86 }, { "FIN": 65 }, { "PAS": 79 }, { "DEF": 77 }]
+      "attributes": [
+        {
+          "VEL": 86
+        },
+        {
+          "FIN": 65
+        },
+        {
+          "PAS": 79
+        },
+        {
+          "DEF": 77
+        }
+      ]
     },
     {
       "id": 11,
@@ -109,7 +239,20 @@
       "name": "Alisson",
       "picture": "exemplo.png",
       "overall": 90,
-      "attributes": [{ "ELA": 86 }, { "MAN": 88 }, { "REF": 89 }, { "POS": 91 }]
+      "attributes": [
+        {
+          "ELA": 86
+        },
+        {
+          "MAN": 88
+        },
+        {
+          "REF": 89
+        },
+        {
+          "POS": 91
+        }
+      ]
     },
     {
       "id": 12,
@@ -117,7 +260,20 @@
       "name": "Ederson",
       "picture": "exemplo.png",
       "overall": 88,
-      "attributes": [{ "ELA": 86 }, { "MAN": 82 }, { "REF": 88 }, { "POS": 86 }]
+      "attributes": [
+        {
+          "ELA": 86
+        },
+        {
+          "MAN": 82
+        },
+        {
+          "REF": 88
+        },
+        {
+          "POS": 86
+        }
+      ]
     },
     {
       "id": 13,
@@ -125,7 +281,20 @@
       "name": "Neuer",
       "picture": "exemplo.png",
       "overall": 89,
-      "attributes": [{ "ELA": 87 }, { "MAN": 87 }, { "REF": 89 }, { "POS": 86 }]
+      "attributes": [
+        {
+          "ELA": 87
+        },
+        {
+          "MAN": 87
+        },
+        {
+          "REF": 89
+        },
+        {
+          "POS": 86
+        }
+      ]
     }
   ]
 }

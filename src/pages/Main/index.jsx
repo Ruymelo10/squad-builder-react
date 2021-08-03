@@ -5,6 +5,7 @@ import { Button } from '../../components/Button';
 
 export const Main = () => {
   const user = localStorage.getItem('user');
+  const role = localStorage.getItem('role');
 
   return (
     <div className="Main">
@@ -16,6 +17,11 @@ export const Main = () => {
         <Link to="/duels">
           <Button>Duelos</Button>
         </Link>
+        {role === 'admin' && (
+          <Link to="/insert-player">
+            <Button>Adicionar Jogador</Button>
+          </Link>
+        )}
       </div>
     </div>
   );
