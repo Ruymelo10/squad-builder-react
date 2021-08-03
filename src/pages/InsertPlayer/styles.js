@@ -52,3 +52,22 @@ export const PositionOption = styled.select`
     cursor: pointer;
   }
 `;
+
+export const StatusMessage = styled.div`
+  display: flex;
+  height: 6vh;
+  padding-left: 1vw;
+  align-items: center;
+  background-color: ${(props) => (props.error ? 'rgb(255, 179, 153)' : 'rgb(204, 255, 153)')};
+  border-radius: 5px;
+  p {
+    color: ${(props) => (props.error ? 'red' : 'green')};
+    padding: 15px;
+  }
+  .fas {
+    color: ${(props) => (props.error ? 'red' : 'green')};
+    :hover {
+      cursor: pointer;
+    }
+  }
+`;
