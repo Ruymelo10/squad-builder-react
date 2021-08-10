@@ -22,6 +22,7 @@ const SignUpUnwrapped = (props) => {
             <InputForm
               labelName="Usuario"
               htmlFor="username"
+              id="username"
               type="text"
               name="username"
               placeholder="Nome"
@@ -33,6 +34,7 @@ const SignUpUnwrapped = (props) => {
             <InputForm
               labelName="Email"
               htmlFor="email"
+              id="email"
               type="email"
               name="email"
               placeholder="Email"
@@ -44,6 +46,7 @@ const SignUpUnwrapped = (props) => {
             <InputForm
               labelName="Senha"
               htmlFor="password"
+              id="password"
               type="password"
               name="password"
               placeholder=""
@@ -53,7 +56,8 @@ const SignUpUnwrapped = (props) => {
             {errors.password && <p>{errors.password}</p>}
             <InputForm
               labelName="Confirmar Senha"
-              htmlFor="password"
+              htmlFor="password2"
+              id="password2"
               type="password"
               name="password2"
               placeholder=""

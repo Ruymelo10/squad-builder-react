@@ -15,8 +15,9 @@ export const InputForm = (props) => {
 };
 
 InputForm.propTypes = {
-  labelName: P.string,
-  htmlFor: P.string,
+  labelName: P.string.isRequired,
+  htmlFor: P.string.isRequired,
+  id: P.string.isRequired,
   type: P.string.isRequired,
   name: P.string.isRequired,
   placeholder: P.string,

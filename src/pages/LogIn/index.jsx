@@ -24,6 +24,7 @@ export const LogIn = () => {
             <InputForm
               labelName="Usuario"
               htmlFor="username"
+              id="username"
               type="text"
               name="username"
               placeholder="Nome"
@@ -42,6 +43,7 @@ export const LogIn = () => {
             <InputForm
               labelName="Senha"
               htmlFor="password"
+              id="password"
               type="password"
               name="password"
               placeholder=""
