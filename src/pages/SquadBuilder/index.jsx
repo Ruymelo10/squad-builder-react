@@ -6,6 +6,7 @@ import { Players } from '../../components/Players';
 import { loadPlayers } from '../../utils/load-players';
 import { FormationArea } from '../../components/FormationArea';
 import { PlayerPositionProvider } from '../../components/PlayerPositionContext';
+import { i18next } from '../../translate/i18n';
 
 export const SquadBuilder = () => {
   const [loading, setLoading] = useState(true);
@@ -27,17 +28,13 @@ export const SquadBuilder = () => {
         </div>
       ) : (
         <>
-          <input className="squad-input" placeholder="Dê um nome à sua equipe" />
+          <input className="squad-input" placeholder={i18next.t('inputPh.SquadBuilder')} />
           <div className="squad-content">
             <PlayerPositionProvider>
               <div className="squad-players-area">
                 <div className="squad-players-area-text">
-                  <h1>Área dos jogadores</h1>
-                  <p>
-                    Aqui você escolhe quem fará parte da sua equipe. Cada jogador tem seu overall e
-                    atributos de velocidade (VEL), finalização(FIN), passe(PAS), defesa(DEF), de
-                    acordo com suas características reais.
-                  </p>
+                  <h1>{i18next.t('h1.SquadBuilder')}</h1>
+                  <p>{i18next.t('p.SquadBuilder')}</p>
                 </div>
                 <Players players={playersData} />
               </div>
@@ -49,9 +46,9 @@ export const SquadBuilder = () => {
               <Formations />
               <div className="squad-buttons">
                 <Button buttonStyle="btn--outline" id="squad-redo-btn">
-                  Refazer escalação
+                  {i18next.t('buttons.SquadBuilderRedo')}
                 </Button>
-                <Button buttonStyle="btn--outline">Confirmar escalação</Button>
+                <Button buttonStyle="btn--outline">{i18next.t('buttons.SquadBuilderSave')}</Button>
               </div>
             </div>
           </div>

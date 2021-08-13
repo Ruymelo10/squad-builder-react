@@ -3,6 +3,7 @@ import './styles.scss';
 import P from 'prop-types';
 import { PlayerAtr } from '../PlayerAtr';
 import { usePlayerPosition } from '../PlayerPositionContext';
+import { i18next } from '../../translate/i18n';
 
 export const Players = ({ players }) => {
   const { playerAreaPosition } = usePlayerPosition();
@@ -10,7 +11,7 @@ export const Players = ({ players }) => {
   return (
     <div className="PlayersArea">
       {playerAreaPosition === 'default' ? (
-        <h2>Selecione uma posição ao no gramado</h2>
+        <h2>{i18next.t('h2.SquadBuilder')}</h2>
       ) : (
         players
           .filter((player) => {
