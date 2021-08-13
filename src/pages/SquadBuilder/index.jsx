@@ -6,6 +6,7 @@ import { Players } from '../../components/Players';
 import { loadPlayers } from '../../utils/load-players';
 import { FormationArea } from '../../components/FormationArea';
 import { PlayerPositionProvider } from '../../components/PlayerPositionContext';
+import { Tilt } from '../../components/Tilt';
 
 export const SquadBuilder = () => {
   const [loading, setLoading] = useState(true);
@@ -18,6 +19,13 @@ export const SquadBuilder = () => {
       setLoading(false);
     });
   }, []);
+
+  const tiltOptions = {
+    scale: 1.1,
+    speed: 200,
+    max: 10,
+    perspective: 900,
+  };
 
   return (
     <div className="SquadBuilder">
@@ -41,9 +49,9 @@ export const SquadBuilder = () => {
                 </div>
                 <Players players={playersData} />
               </div>
-              <div className="squad-area">
+              <Tilt options={tiltOptions} className="squad-area">
                 <FormationArea />
-              </div>
+              </Tilt>
             </PlayerPositionProvider>
             <div className="squad-options">
               <Formations />
