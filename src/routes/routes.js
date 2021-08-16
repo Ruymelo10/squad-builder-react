@@ -42,7 +42,7 @@ const AdminRoute = ({ component: Component, ...rest }) => {
           checkAdmin() ? (
             <Component {...rest} />
           ) : (
-            <Redirect to={{ pathname: '*' }} />
+            <Redirect to={{ pathname: '404' }} />
           )
         ) : (
           <Redirect to={{ pathname: '/login' }} />
