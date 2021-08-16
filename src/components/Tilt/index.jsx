@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
 import P from 'prop-types';
 
@@ -6,8 +6,11 @@ export const Tilt = (props) => {
   const { children, options, ...rest } = props;
   const tilt = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     VanillaTilt.init(tilt.current, options);
+    return () => {
+      tilt.vanillaTilt.destroy();
+    };
   }, [options]);
 
   return (
