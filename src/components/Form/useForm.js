@@ -1,8 +1,11 @@
-import { useState } from 'react';
-import { loadUsers } from '../../utils/load-users';
+import { useState, useEffect, useCallback } from 'react';
+import { loadUsers } from '../../container/fetchUser/fetchUserAction';
 import { validateMissingFields } from './validateMissingFields';
 import { useDispatch } from 'react-redux';
-import { userLogin } from '../../actions';
+import { userLogin } from '../../container/user/userAction';
+import { useSelector } from 'react-redux';
+import { getFetchedUsers } from '../../container/fetchUser/fetchUserReducer';
+import { getUser } from '../../container/user/userReducer';
 
 export const useForm = (validate, formType) => {
   const [values, setValues] = useState({
@@ -13,6 +16,9 @@ export const useForm = (validate, formType) => {
   });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('init');
+  const { users } = useSelector(getFetchedUsers);
+  const { name } = useSelector(getUser);
+  const fetchStatus = useSelector(getFetchedUsers).status;
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -22,11 +28,9 @@ export const useForm = (validate, formType) => {
       [name]: value,
     });
   };
-
-  const handleFormResponse = async () => {
-    const usersResponse = await loadUsers();
+  const handleFormResponse = useCallback(() => {
     const currentStatus = status;
-    const validateResponse = validate(values, usersResponse, currentStatus);
+    const validateResponse = validate(values, users, currentStatus);
     setErrors(validateResponse.errors);
     setStatus(validateResponse.status);
     if (validateResponse.status === 'login-success') {
@@ -37,7 +41,13 @@ export const useForm = (validate, formType) => {
         }),
       );
     }
-  };
+  }, [dispatch, status, users, validate, values]);
+
+  useEffect(() => {
+    if (fetchStatus === 'fetch-success' && name === undefined) {
+      handleFormResponse();
+    }
+  }, [handleFormResponse, fetchStatus, name]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,7 +57,7 @@ export const useForm = (validate, formType) => {
 
     if (Object.keys(inputErrors).length === 0) {
       setStatus('loading');
-      handleFormResponse();
+      dispatch(loadUsers());
     }
   };
 
