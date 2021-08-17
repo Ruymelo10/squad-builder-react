@@ -60,14 +60,15 @@ export const StatusMessage = styled.div`
   align-items: center;
   background-color: ${(props) => (props.error ? 'rgb(255, 179, 153)' : 'rgb(204, 255, 153)')};
   border-radius: 5px;
-  p {
-    color: ${(props) => (props.error ? 'red' : 'green')};
-    padding: 15px;
-  }
-  .fas {
-    color: ${(props) => (props.error ? 'red' : 'green')};
-    :hover {
-      cursor: pointer;
-    }
+`;
+
+export const PStatusMessage = styled.p`
+  color: ${(props) => (props.error ? 'red' : 'green')};
+  padding: 15px;
+`;
+export const FasStatusMessage = styled.i`
+  color: ${(props) => (props.error ? 'red' : 'green')};
+  :hover {
+    cursor: pointer;
   }
 `;

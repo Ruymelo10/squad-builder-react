@@ -7,6 +7,9 @@ import {
   PlayerInputs2,
   PositionOption,
   StatusMessage,
+  PStatusMessage,
+  FasStatusMessage,
+  // FasStatusMessage,
 } from './styles';
 
 const goleiro = ['ELA', 'MAN', 'REF', 'POS'];
@@ -14,7 +17,7 @@ const linePlayer = ['VEL', 'FIN', 'PAS', 'DEF'];
 
 export const InsertPlayer = () => {
   const [position, setPosition] = useState('');
-  const [status, setStatus] = useState('success');
+  const [status, setStatus] = useState('init');
 
   function setFormValues(attribute) {
     let values = {};
@@ -61,13 +64,13 @@ export const InsertPlayer = () => {
     <InsertPlayerWrap>
       {status === 'init' ? null : status === 'success' ? (
         <StatusMessage>
-          <i className="fas fa-times" onClick={() => closeMessage()}></i>
-          <p>Jogador adicionado com sucesso</p>
+          <FasStatusMessage className="fas fa-times" onClick={() => closeMessage()} />
+          <PStatusMessage>Jogador adicionado com sucesso</PStatusMessage>
         </StatusMessage>
       ) : (
         <StatusMessage error>
-          <i className="fas fa-times" onClick={() => closeMessage()}></i>
-          <p>Erro ao adicionar jogador</p>
+          <FasStatusMessage error className="fas fa-times" onClick={() => closeMessage()} />
+          <PStatusMessage error>Erro ao adicionar jogador</PStatusMessage>
         </StatusMessage>
       )}
       <h1>Adicionar Jogador</h1>
